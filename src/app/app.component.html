@@ -104,10 +104,12 @@
         </div>
       </div>
       <div class="flex flex-col">
+                  <a [routerLink]="['/dashboard']">Hello Peeps</a>
+
         <button
           class="bg-green-500 w-3/5 shadow-lg hover:bg-green-600 transition-all duration-500 ease-in-out mt-5 shadow-green-400 px-10 py-3 rounded-lg text-2xl font-medium text-white"
         >
-          Sign Up
+        Sign Up 
         </button>
         <small
           >Already have an account?
@@ -227,11 +229,17 @@
       </div>
     </div>
     <div class="w-4/5 flex gap-4 px-5">
-      <div class="bg-green-500 w-3/5 h-screen py-10">
-        <div class="bg-yellow-700 flex flex-col space-y-4 h-full">
-          <div class="flex space-x-2">
-            <input type="text" class="border-2 border-black" />
-            <span>Tuesday, 15th, February, 2022</span>
+      <div class="w-3/5 h-screen py-10">
+        <div class="flex flex-col space-y-4 h-full">
+          <div class="grid grid-cols-2 gap-4">
+            <input
+              type="text"
+              placeholder="Search..."
+              class="px-3 py-2 focus:outline-none"
+            />
+            <div class="flex items-center font-medium text-gray-400">
+              Tuesday, 15th, February, 2022
+            </div>
           </div>
           <div class="bg-white rounded-lg flex h-2/6 p-5">
             <div>
@@ -296,33 +304,70 @@
                 </div>
               </div>
             </div>
-            <div class="bg-white rounded-lg flex flex-col p-5">
+            <div
+              class="bg-white overflow-scroll Schedule-Box rounded-lg h-5/5 flex flex-col p-5"
+            >
               <div class="grid grid-cols-2">
                 <h1 class="text-[#6C63FF] font-semibold">Schedules</h1>
                 <div class="flex justify-end">dots</div>
               </div>
-              <div class="flex flex-col space-x-4">
-                <div class="flex p-2 border-r-2 border-gray-400">
+              <div class="grid grid-cols-3 mb-3">
+                <div class="flex flex-col p-2 border-r-2 border-gray-400">
                   <h1 class="text-4xl font-semibold text-[#6C63FF]">23</h1>
                   <small class="text-gray-300">MAR, 2022</small>
                 </div>
-                <div class="flex flex-col space-x-3">
-                  <h1>
-                    Meeting at <strong>9:00 PM</strong> with junior developers
-                  </h1>
-                  <div class="bg-orange-500 rounded-full px-3 py-2">
-                    Important
+                <div class="col-span-2 flex flex-col px-3">
+                  <div class="text-[#6C63FF] font-semibold">
+                    <h1>
+                      Meeting at <strong>9:00 PM</strong> <br />
+                      <small>
+                        <span class="text-gray-300"
+                          >with junior developers</span
+                        >
+                      </small>
+                    </h1>
+                  </div>
+                  <div class="bg-orange-500 rounded-full px-3 text-white">
+                    <small>Important</small>
                   </div>
                 </div>
-                <hr class="text-gray-400 h-5 w-full" />
               </div>
-              <div></div>
-              <div></div>
+
+              <hr class="text-gray-400 h-5 w-full" />
+              <div class="grid grid-cols-3 mb-3">
+                <div class="flex flex-col p-2 border-r-2 border-gray-400">
+                  <h1 class="text-4xl font-semibold text-[#6C63FF]">23</h1>
+                  <small class="text-gray-300">MAR, 2022</small>
+                </div>
+                <div class="col-span-2 flex flex-col px-3">
+                  <div class="text-[#6C63FF] font-semibold">
+                    <h1>
+                      Meeting at <strong>9:00 PM</strong> <br />
+                      <small>
+                        <span class="text-gray-300">with Babe</span>
+                      </small>
+                    </h1>
+                  </div>
+                  <div class="bg-red-500 rounded-full px-3 text-white">
+                    <small>Very Very Important</small>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="bg-red-500 w-2/5 h-screen"></div>
+      <div class="w-2/5 flex-col space-y-5 h-screen py-10">
+        <div class="bg-yellow-500 flex flex-col space-y-4">
+          <div class="flex space-x-3">
+            <span>Bell</span>
+            <div class="bg-blue-700 rounded-full h-8 w-8"></div>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg p-5 w-full h-2/5">
+          Calender Goes here
+        </div>
+      </div>
     </div>
   </div>
 </div>
