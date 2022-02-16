@@ -10,10 +10,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   declarations: [AppComponent, DashboardComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    RouterModule.forRoot([
-      { path: 'dashboard/', component: DashboardComponent },
-    ]),
+    AppRoutingModule
   ],
   providers: [AppComponent, DashboardComponent],
   bootstrap: [AppComponent, DashboardComponent],
